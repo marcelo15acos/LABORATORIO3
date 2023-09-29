@@ -1,0 +1,56 @@
+.slider {
+    width: auto;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: calc(400px * 14);
+}
+
+.slider .slide {
+    width: 400px;
+    
+}
+
+.slider .slide img {
+    width: 70%;
+    height: 295px;
+    outline: 6px dashed yellow;
+    box-shadow: 0 0 0 6px #EA3536;
+    animation: animateBorder 2s linear 1s infinite alternate;
+    transition: 1s;
+
+
+}
+
+/* Animacion de bordes de imagenes del carrusel */
+@keyframes animateBorder {
+    from{
+        outline-color: #35c6ea;
+        box-shadow: 0 0 0 6px rgb(6, 252, 59);
+
+        to{
+            outline-color: yellow;
+            box-shadow: 0 0 0 6px #EA3536;
+
+        }
+    }
+}
+/* ========================================= */
+
+/* Animacion de carrusel */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-400px * 7));
+    }
+}
+/* ========================================= */
